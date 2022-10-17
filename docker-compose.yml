@@ -11,9 +11,7 @@ services:
     volumes_from:
       - php    
   php:
-    build: php-8.0-fpm
-    environment:
-      - TYPO3_CONTEXT=Development/Docker
+    image: php:latest
     links:
       - db
       - redis
